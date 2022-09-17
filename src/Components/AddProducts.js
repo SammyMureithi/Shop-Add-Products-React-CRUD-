@@ -11,7 +11,7 @@ function AddProducts() {
     const [productName, setProductName] = useState();
     const [price, SetPrice] = useState();
     const [quantity, setQuantity] = useState();
-    const getNextId = ( ( id ) => () => ++id )( 3);
+  
     function AddnewProduct( e ) {
         e.preventDefault();
         let newPro = {
@@ -39,8 +39,12 @@ function AddProducts() {
         }
     }
     const prod = products.map( element => {
-      return   <ProductsCard title={element.name} price={element.price} quantity={element.quantity}/>
-    })
+      return   <ProductsCard title={element.name} price={element.price} quantity={element.quantity} handleDelete={()=>handleDelete(element.id)} />
+    } )
+    function handleDelete( id ) {
+        const afterDelete = products.filter( produce => produce.id !== id );
+        setProducts( afterDelete );
+    }
   return (
       <div>
           <form>

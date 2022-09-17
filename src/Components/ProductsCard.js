@@ -8,10 +8,9 @@ function ProductsCard(props) {
           <h1>{`Quantity: ${props.quantity}`}</h1>
           <h1>{`Price: ${props.price}`}</h1>
           </div>
-          
           <div id="products-btn">
               <button id="update">Update</button>
-              <button id="delete">Delete</button>
+              <button id="delete" onClick={props.handleDelete}>Delete</button>
           </div>
     </div>
   )
