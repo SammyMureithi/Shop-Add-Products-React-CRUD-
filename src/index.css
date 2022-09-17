@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#product{
+  display: flex;
+  flex-direction: column;
+  max-width: 60vh;
+  border: 2px solid green;
+  margin: 10px auto;
+  padding: 12px;
+}
+#products-btn{
+  display: flex;
+  margin: 0px auto;
+}
+#products-btn button{
+  margin: 0.5rem;
+  padding: 10px 19px;
+  border-radius: 12px;
+}
+#product h1{
+  margin: 0px;
+}
+#update{
+  background-color: green;
+  color: white;
+}
+#delete{
+  background-color: red;
+  color: black;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 0px auto;
+  border: solid red 2px ;
+  justify-content: center;
+  align-items: center;
+}
+form button{
+  margin: 2rem;
+  color: white;
+  background-color: black;
+  padding: 10px 19px;
+}
+#purchase{
+  display: flex;
+  flex-wrap: wrap;
+}
